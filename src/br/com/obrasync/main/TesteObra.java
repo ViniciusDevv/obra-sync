@@ -35,10 +35,15 @@ public class TesteObra {
 		
 		}
 		
+		double totalGeral = 0;
+		
 		System.out.println("\n--- RELATORIO FINAL DO ESTOQUE ---");
 		for (Material item : estoque) {
+			item.exibirDetalhes();
+			totalGeral += item.getPreco();
 			System.out.println("Item: " + item.getNome() + " | Peso: "
 					+ item.getPeso() + "kg");
+			System.out.println("\nVALOR TOTAL DA OBRA: " + totalGeral);
 		}
 		
 		System.out.println("Sistema encerrado.");
